@@ -14,7 +14,7 @@ namespace Steg {
         uint16_t Alpha;
 
         RGBColor(uint16_t red, uint16_t green, uint16_t blue, uint16_t alpha)
-            : Red(red), Green(green), Blue(blue), Alpha(alpha) {}
+                : Red(red), Green(green), Blue(blue), Alpha(alpha) {}
 
         uint64_t ToInt(uint32_t bitDepth, bool hasAlpha) {
             uint64_t color = 0;

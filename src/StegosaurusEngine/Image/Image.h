@@ -50,7 +50,7 @@ namespace Steg {
 
         Image(uint32_t width, uint32_t height, const PixelMode& mode);
 
-        Image operator=(const Image & other) = delete;
+        Image operator=(const Image& other) = delete;
 
         static PixelMode GetGrayMode(uint32_t bitDepth, bool hasAlpha);
 

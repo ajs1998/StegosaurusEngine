@@ -44,17 +44,13 @@ namespace Steg {
             byte result = 0;
             if (DataDepth == 1) {
                 result |= 0b00'000000;
-            }
-            else if (DataDepth == 2) {
+            } else if (DataDepth == 2) {
                 result |= 0b01'000000;
-            }
-            else if (DataDepth == 4) {
+            } else if (DataDepth == 4) {
                 result |= 0b10'000000;
-            }
-            else if (DataDepth == 8) {
+            } else if (DataDepth == 8) {
                 result |= 0b11'000000;
-            }
-            else {
+            } else {
                 throw std::invalid_argument("Invalid data depth: " + DataDepth);
                 return 0;
             }
@@ -67,15 +63,15 @@ namespace Steg {
             if (Encryption.EncryptPayload) {
                 result |= 0b000'1'0000;
                 switch (Encryption.Algo) {
-                case StegCrypt::Algorithm::ALGO_AES128:
-                    result |= 0b0000'00'00;
-                    break;
-                case StegCrypt::Algorithm::ALGO_AES192:
-                    result |= 0b0000'01'00;
-                    break;
-                case StegCrypt::Algorithm::ALGO_AES256:
-                    result |= 0b0000'10'00;
-                    break;
+                    case StegCrypt::Algorithm::ALGO_AES128:
+                        result |= 0b0000'00'00;
+                        break;
+                    case StegCrypt::Algorithm::ALGO_AES192:
+                        result |= 0b0000'01'00;
+                        break;
+                    case StegCrypt::Algorithm::ALGO_AES256:
+                        result |= 0b0000'10'00;
+                        break;
                 }
             }
 
@@ -92,14 +88,11 @@ namespace Steg {
             byte depth = (settingsByte & 0b11'000000) >> 6;
             if (depth == 0b00) {
                 settings.DataDepth = 1;
-            }
-            else if (depth == 0b01) {
+            } else if (depth == 0b01) {
                 settings.DataDepth = 2;
-            }
-            else if (depth == 0b10) {
+            } else if (depth == 0b10) {
                 settings.DataDepth = 4;
-            }
-            else if (depth == 0b11) {
+            } else if (depth == 0b11) {
                 settings.DataDepth = 8;
             }
 
@@ -109,15 +102,15 @@ namespace Steg {
 
             if (settings.Encryption.EncryptPayload) {
                 switch ((settingsByte & 0b0000'11'00) >> 2) {
-                case 0b00:
-                    settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES128;
-                    break;
-                case 0b01:
-                    settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES192;
-                    break;
-                case 0b10:
-                    settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES256;
-                    break;
+                    case 0b00:
+                        settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES128;
+                        break;
+                    case 0b01:
+                        settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES192;
+                        break;
+                    case 0b10:
+                        settings.Encryption.Algo = StegCrypt::Algorithm::ALGO_AES256;
+                        break;
                 }
             }
 
