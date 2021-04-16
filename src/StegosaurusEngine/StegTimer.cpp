@@ -1,4 +1,4 @@
-#include "StegTimer.h"
+#include "include/StegTimer.h"
 #include <iostream>
 
 using namespace Steg;

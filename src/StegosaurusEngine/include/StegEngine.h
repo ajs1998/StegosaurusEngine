@@ -2,9 +2,9 @@
 
 #include "Core.h"
 
-#include "Crypt/StegCrypt.h"
+#include "StegCrypt.h"
 #include "RNG.h"
-#include "Image/Image.h"
+#include "Image.h"
 
 namespace Steg {
 

@@ -1,5 +1,5 @@
-#include "Image.h"
-#include "GrayImage.h"
+#include "include/Image.h"
+#include "include/GrayImage.h"
 #include "lodepng.h"
 
 using namespace Steg;

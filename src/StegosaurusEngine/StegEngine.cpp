@@ -1,8 +1,8 @@
-#include "StegEngine.h"
+#include "include/StegEngine.h"
 
-#include "Crypt/StegCrypt.h"
-#include "Image/RGBImage.h"
-#include "StegTimer.h"
+#include "include/StegCrypt.h"
+#include "include/RGBImage.h"
+#include "include/StegTimer.h"
 
 using namespace Steg;
 

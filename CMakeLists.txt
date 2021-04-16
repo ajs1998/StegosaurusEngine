@@ -14,6 +14,7 @@ file(GLOB_RECURSE SRC_FILES "${SRC_DIR}/*.cpp" "${SRC_DIR}/*.h")
 # Add the source files to this project's binary
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+include_directories("include")
 
 # Link submodule libraries
 set(LIB_DIR "lib")
