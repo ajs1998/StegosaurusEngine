@@ -1,0 +1,6 @@
+[submodule "lib/lodepng"]
+	path = lib/lodepng
+	url = https://github.com/lvandeve/lodepng
+[submodule "lib/argon2"]
+	path = lib/argon2
+	url = https://github.com/winlibs/argon2

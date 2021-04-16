@@ -1,0 +1,14 @@
+# Ignore everyting
+/*
+
+# Plus some extra stuff
+**/.idea/
+**/.DS_Store
+
+# Unignore useful things
+!src/
+!lib/
+!.gitignore
+!.gitmodules
+!README.md
+!CMakeLists.txt
