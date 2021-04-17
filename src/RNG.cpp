@@ -1,4 +1,4 @@
-#include "include/RNG.h"
+#include "RNG.h"
 
 using namespace Steg;
 

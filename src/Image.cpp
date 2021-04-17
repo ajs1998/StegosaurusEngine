@@ -1,4 +1,4 @@
-#include "include/Image.h"
+#include "Image.h"
 #include "lodepng.h"
 
 using namespace Steg;

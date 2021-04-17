@@ -1,8 +1,8 @@
-#include "include/StegCrypt.h"
+#include "StegCrypt.h"
 
 #include "aes.h"
-#include "include/argon2.h"
-#include "include/StegTimer.h"
+#include "argon2.h"
+#include "StegTimer.h"
 
 using namespace Steg;
 
